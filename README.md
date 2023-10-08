@@ -1,5 +1,5 @@
-# Sales-Analysis-with-SQL
+# Data Exploration with SQL
 
 ![alt text](images/Readme.jpg)
 
-I analyzed transaction data from Super Mart, using SQL and provided insights into business performance.
+I analyzed dataset from Super Mart, using SQL and provided insights into business performance.
