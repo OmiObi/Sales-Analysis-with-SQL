@@ -11,7 +11,7 @@ on a.Region = b.Region_Name
 group by b.Manager, a.Region
 order by Total_Sales desc;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\1.jpg)
+![alt text](images/1.jpg)
 
 Pat, the Manager in charge of the West Region is the Manager with the best Sales ($3,597,549.329).
 
@@ -22,7 +22,7 @@ select count (Ship_Mode) 'Count of Transation'
 from [Sales_Analysis].[dbo].[Sales_transaction]
 where Ship_mode = 'Delivery Truck';
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\2.jpg)
+![alt text](images/2.jpg)
 
 The delivery Truck was used as a ship mode 1,146 times.
 
@@ -42,7 +42,7 @@ where a.Order_status = 'Returned'
 group by b.Product_category
 order by 'count of Returned Order Status' desc;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\3.jpg)
+![alt text](images/3.jpg)
 
 872 orders were returned in total and the most rejected product category is Office supplies with a total of 461 returned orders.
 
@@ -54,7 +54,7 @@ from [Sales_Analysis].[dbo].[Sales_transaction]
 Group by datepart (year, Ship_date)
 order by Ship_Cost;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\5.jpg)
+![alt text](images/5.jpg)
 
 In company incurred the least shipping cost in 2011.
 
@@ -69,7 +69,7 @@ from [Sales_Analysis].[dbo].[Sales_transaction]
 Group by datename (weekday, Real_order_date), Customer_segment
 order by Sales desc;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\6.jpg)
+![alt text](images/6.jpg)
 
 Saturday is the day of the week that corporate customer segment has the most sales.
 
@@ -83,7 +83,7 @@ on a.order_id = b.order_id
 where a.Order_status = 'Delivered'
 group by a.Order_status;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\7.jpg)
+![alt text](images/7.jpg)
 
 The company got $2,560,886.130 profit from the orders that were delivered.
 
@@ -94,7 +94,7 @@ Select First_Name, Last_Name, datepart (year, Birth_date) as Birth_year
 from [Sales_Analysis].[dbo].[Sales_transaction]
 where datepart (year, Birth_date) = 2011;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\8.jpg)
+![alt text](images/8.jpg)
 
 There is no customer born in the year 2011
 
@@ -104,7 +104,7 @@ There is no customer born in the year 2011
 Select sum(Order_quantity) Total_order
 from [Sales_Analysis].[dbo].[Sales_transaction];
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\9.jpg)
+![alt text](images/9.jpg)
 
 A total of 214,777 orders were made by all customers.
 
@@ -116,7 +116,7 @@ from [Sales_Analysis].[dbo].[Sales_transaction]
 Group by Product_sub_category
 Order by Profit;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\10.jpg)
+![alt text](images/10.jpg)
 
 Tables, Bookcases, Scissors, Rulers and Trimmers, and Rubber Bands have a negative profit total, and they should be considered for discontinuation.
 
@@ -128,6 +128,6 @@ from [Sales_Analysis].[dbo].[Sales_transaction]
 Group by Product_sub_category
 Order by Profit desc;
 ```
-![alt text](C:\Users\omowu\OneDrive\Documents\GitHub\Sales-Analysis-with-SQL\images\11.jpg)
+![alt text](images/11.jpg)
 
 Telephones and Communication, and Office Machines are the 2 most profitable products with total profit of $316,951.620 and $307,712.930 respectively
